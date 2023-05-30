@@ -1,24 +1,28 @@
-import logo from './logo.svg';
+
 import './App.css';
+import './styles/navbar.css'
+import './styles/earnandrefer.css'
+import './styles/howdoesitworkcard.css'
+import './styles/friendrefer.css'
+import './styles/referfriendcard.css'
+
+import Earnandrefer from './screens/Earnandrefer';
+import Navbar from './components/Navbar';
+import Friendrefer from './screens/Friendrefer';
+
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <BrowserRouter>
+        <Navbar />
+        <Routes>
+          <Route  exact path = {"/"} element={<Earnandrefer />}/>
+          <Route  exact path = {"/friendrefer"} element={<Friendrefer />}/>
+        </Routes>
+      </BrowserRouter>
+    </>
   );
 }
 

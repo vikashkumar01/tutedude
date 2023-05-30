@@ -1,0 +1,96 @@
+nav {
+    width: 1366px;
+    height: 73.03px;
+}
+
+.tut_logo {
+    position: absolute;
+    width: 160px;
+    height: 63px;
+    left: 74px;
+    top: 6px;
+
+}
+
+.tut_logo>img {
+    width: 160px;
+    height: 63px;
+}
+
+.nav_link {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    position: absolute;
+    width: 519px;
+    height: 24px;
+    left: 766px;
+    top: 25px;
+}
+
+.nav_link>a {
+    width: 140px;
+    height: 22px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 123.5%;
+    text-align: center;
+    color: rgba(128, 0, 128, 0.25);
+
+}
+
+.nav_link>:nth-child(3) {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+@media only screen and (max-width: 429px) {
+
+    nav {
+        width: 428px;
+    }
+
+    .tut_logo {
+        left: 2px;
+        top:15px;
+
+    }
+
+    .nav_link {
+        width: 165px;
+        left: 228px;
+    }
+
+    .nav_link>:nth-child(1) {
+        display: none;
+    }
+
+    .nav_link>:nth-child(2) {
+        display: none;
+    }
+
+    .nav_link>:nth-child(3) {
+        padding: 12px 25px;
+        position: absolute;
+        width: 165px;
+        height: 48px;
+        background: #800080;
+        border-radius: 10px;
+        color: white;
+    }
+
+    .profile_icon {
+        display: none;
+    }
+
+    .down_arrow {
+        color: white;
+        z-index: 1;
+    }
+}
